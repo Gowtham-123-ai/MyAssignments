@@ -1,0 +1,15 @@
+let data = ["Bharathi" , 4.93 ,"f","chrome"]
+
+data.push(93)
+console.log("push : " +data)
+data.pop()
+console.log("pop : "  +data)
+data.shift()
+console.log("shift : " +data)
+data.unshift("kannan")
+console.log("unshift : " +data)
+console.log("includes : " +data.includes("f"))
+console.log("indexOf : " +data.indexOf("f"))
+console.log("join : " + data.join())
+console.log("reverse : " +data.reverse())
+console.log("sort : " + data.sort())
