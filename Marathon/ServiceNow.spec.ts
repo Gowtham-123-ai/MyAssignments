@@ -20,10 +20,10 @@ test("service now", async({page}) =>{
     await frame.locator("//label[text()='Sierra Blue']").click()
     await frame.locator("//label[text()='512 GB [add $300.00]']").click()
     await frame.locator("#oi_order_now_button").click()
-    const conMsgLocator = frame.locator(".notification.notification-success")
-    await expect(conMsgLocator).toBeEnabled()
-    const conMsg = await conMsgLocator.textContent()
-    expect(conMsg).toContain(conMsgLocator)
+    const confirmationmsg = frame.locator(".notification.notification-success")
+    await expect(confirmationmsg).toBeVisible()
+    const conMsg = await confsirmationmsg.textContent()
+    expect(conMsg).toContain(confirmationmsg)
     await page.screenshot({
         path: 'Screenshots/FullPage.png',
         fullPage:true
